@@ -10,9 +10,22 @@
 html,
 body {
     background-color: rgb(245, 245, 245);
-    font-family: sans-serif;
+    font-family:'Source Sans Pro', sans-serif;
     color: rgb(35, 35, 35)
 }
+
+
+@keyframes salto {
+    from {
+        transform: translate(0px, 10px);
+    }
+
+    to {
+        transform: translate(0px);
+    }
+}
+
+
 
 .mobile {
     width: 90%;
@@ -48,9 +61,13 @@ footer {
 .contenedor img {
     margin-top: 10px;
     width: 50px;
+    animation-name: salto;
+    animation-duration: .2s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
 }
 
-.contenedor h2 {
+.contenedor p {
     font-size: 1.5rem;
     display: none;
 }
@@ -91,6 +108,9 @@ footer {
     height: 100vh;
     background-image: linear-gradient(
         0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5),
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5),
@@ -135,31 +155,13 @@ footer {
 
 /* PLANTEL */
 
-
-
-.grid_plantel {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: 'titulo titulo'
-                         'subtitulo subtitulo'
-                         'plantel plantel';
-    row-gap: 15px;
-}
-
-.titulo-seccion {
-    grid-area: titulo;
-}
-
 .plantel {
-    grid-area: subtitulo;
     text-align: center;
     margin-top: 20px;
     font-size: 1.1rem;
 }
 
 .tarjeta-plantel {
-    grid-area: plantel;
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
@@ -185,6 +187,7 @@ footer {
 
 .imagen_plantel {
     width: 100%;
+    max-width: 541px;
     height: 21.7rem;
     background-image: url(../imagenes/plantel-1986.jpg);
     background-size: 100% 21.5em;
@@ -240,16 +243,16 @@ footer {
 
 .grid_torneo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'imagen imagen'
-                         'conferencia conferencia'
-                         'relato relato';
+    grid-template-columns: 1fr;
+    grid-template-areas: 'titulo'
+                         'imagen'
+                         'conferencia'
+                         'relato';
     row-gap: 15px;
 }
 
 .titulo_torneo {
-    grid-area : titulo;
+    grid-area: titulo;
     text-align: center;
 }
 
@@ -313,11 +316,11 @@ footer {
 
 .grid_libertadores {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'imagen imagen'
-                         'conferencia conferencia'
-                         'relato relato';
+    grid-template-columns: 1fr;
+    grid-template-areas: 'titulo'
+                         'imagen'
+                         'conferencia'
+                         'relato';
     row-gap: 15px;
 }
 
@@ -384,25 +387,21 @@ footer {
 }
 
 .grid_inter {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'imagen imagen'
-                         'relato relato';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     row-gap: 15px;
 }
 
 .titulo_intercontinental {
-    grid-area: titulo;
     text-align: center;
 }
 
 .relato__intercontinental {
-    grid-area: relato;
+    order: 1;
 }
 
 .contenedor-imagen {
-    grid-area: imagen;
     width: 100%;
     height: 21.5rem;
     background-image: url(../imagenes/copa_intercontinental.jpg);
@@ -430,25 +429,11 @@ footer {
     border-bottom: 1px solid rgba(35, 35, 35, .5);
 }
 
-.grid_plantel_2018 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'plantel plantel'
-                         'tarjeta tarjeta';
-}
-
 .titulo_gallardo {
-    grid-area: titulo;
     margin-top: 30px;
 }
 
-.plantel {
-    grid-area: plantel;
-}
-
 .tarjeta_plantel_gallardo {
-    grid-area: tarjeta;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -525,10 +510,10 @@ footer {
 
 .grid__supercopa {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'imagen imagen'
-                         'relato relato';
+    grid-template-columns: 1fr;
+    grid-template-areas: 'titulo'
+                         'imagen'
+                         'relato';
     row-gap: 15px;
 }
 
@@ -568,22 +553,23 @@ footer {
 }
 
 .grid_libertadores-gallardo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'imagen imagen'
-                         'relato relato'
-                         'eterno eterno';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 15px;
 }
 
 .titulo__libertadores_gallardo {
-    grid-area: titulo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .relato-lib-gallardo {
-    grid-area: relato;
     font-size: .9rem;
+    order: 2;
 }
 
 .relato-lib-gallardo p {
@@ -591,18 +577,17 @@ footer {
 }
 
 .contenedor__img__libertadores {
-    grid-area: imagen;
     width: 100%;
     height: 21.5rem;
     background-image: url(../imagenes/plantel_2018.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    order: 1;
 }
 
 .contenedor__parrafo_gallardo {
-    grid-area: eterno;
-    text-align: center;
+    order: 3;
     font-weight: bold;
 }
 
@@ -620,21 +605,16 @@ footer {
 
 .grid-nuestra-historia {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'tarjetas tarjetas'
-                         'tarjetas tarjetas';
+    display: flex;
+    flex-direction: column;
     row-gap: 12px;
 }
 
 .titulo__historia {
-    grid-area: titulo;
     text-align: center;
 }
 
 .contenedor__tarjetas-historia {
-    grid-area: tarjetas;
     display: flex;
     flex-direction: column;
     row-gap: 12px;
@@ -680,20 +660,16 @@ footer {
 
 .grid-amateur {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'tarjetas tarjetas';
+    display: flex;
+    flex-direction: column;
     row-gap: 12px;
 }
 
 .titulo__amateur {
-    grid-area: titulo;
     text-align: center;
 }
 
 .contenedor__tarjetas-amateur {
-    grid-area: tarjetas;
     display: flex;
     flex-direction: column;
     row-gap: 12px;
@@ -729,20 +705,16 @@ footer {
 
 .grid-profesionalismo {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'tarjetas tarjetas';
+    display: flex;
+    flex-direction: column;
     row-gap: 12px;
 }
 
 .titulo__profesionalismo {
-    grid-area: titulo;
     text-align: center;
 }
 
 .contenedor_tarjeta_pro {
-    grid-area: tarjetas;
     display: flex;
     flex-direction: column;
     row-gap: 12px;
@@ -779,20 +751,16 @@ footer {
 
 .grid-noventa {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'tarjetas tarjetas';
+    display: flex;
+    flex-direction: column;
     row-gap: 12px;
 }
 
 .titulo__decada-noventa {
-    grid-area: titulo;
     text-align: center;
 }
 
 .contenedor__tarjeta_decada {
-    grid-area: tarjetas;
     display: flex;
     flex-direction: column;
     row-gap: 12px;
@@ -832,20 +800,16 @@ footer {
 
 .grid-descenso {
     margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'titulo titulo'
-                         'tarjetas tarjetas';
+    display: flex;
+    flex-direction: column;
     row-gap: 12px;
 }
 
 .titulo__descenso {
-    grid-area: titulo;
     text-align: center;
 }
 
 .contenedor__tarjetas_descenso {
-    grid-area: tarjetas;
     display: flex;
     flex-direction: column;
     row-gap: 12px;
@@ -912,7 +876,6 @@ footer {
 
 .copy {
     grid-area: copy;
-    text-align: center;
     font-size: .8rem;
     display: flex;
     justify-content: center;
@@ -948,23 +911,15 @@ footer {
 }
 
 
-.iconos {
-    display: flex
-}
-
-
 
 
 /* INICIO DE LA PAGINA CONTACTO */
-
 
 #contacto {
     background-color: rgb(237, 27, 46);
     color: rgb(245, 245, 245);
     height: 100vh;
 }
-
-
 
 .contenedor__contacto {
     width: 90%;
@@ -1009,7 +964,6 @@ footer {
 }
 
 .formulario1 label {
-    width: 100%;
     font-weight: bold;
 }
 
@@ -1211,12 +1165,8 @@ footer {
     }
 
     .barra__derecha li {
-        text-align: center;
         padding: 10px;
     }
-
-
-
 
 
     /* INICIO */
@@ -1274,7 +1224,6 @@ footer {
     }
 
     .tarjeta-plantel {
-        flex-wrap: wrap;
         text-align: center;
     }
 
@@ -1367,10 +1316,7 @@ footer {
     }
 
     .tarjeta_plantel_gallardo {
-        grid-area: tarjeta;
-        flex-wrap: wrap;
         column-gap: 100px;
-        text-align: center;
         padding-bottom: 20px;
     }
 
@@ -1378,20 +1324,6 @@ footer {
     .plantel_suplente {
         border: none;
     }
-
-    .plantel_titular {
-        order: 1;
-    }
-
-    .plantel_suplente {
-        order: 2;
-    }
-
-    .tarjeta_plantel_gallardo {
-        order: 0;
-        background-size: cover;
-    }
-
 
 
     /* SUPERCOPA Y LIBERTADORES 2018 */
@@ -1441,29 +1373,16 @@ footer {
         padding-top: 15px;
     }
 
-    .contenedor__formularios {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
 
     /* PRIMER FORMULARIO */
 
 
-
-
     .formulario1 {
         padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         row-gap: 5px;
     }
 
     .formulario1 p {
-        font-weight: bold;
         font-size: 1.2rem;
     }
 
@@ -1472,50 +1391,7 @@ footer {
 
     .formulario2 p {
         font-size: 1.2rem;
-        text-align: center;
         padding-top: 30px;
-        padding-bottom: 18px;
-        font-weight: bold;
-    }
-
-    .formulario2 form {
-        display: flex;
-        flex-direction: column;
-        row-gap: 15px;
-    }
-
-    .formulario2 form input {
-        width: 250px;
-        height: 30px;
-        border-radius: 5px;
-        border-style: none;
-    }
-
-    .formulario2 form input:hover {
-        background-color: rgba(35, 35, 35, .8);
-        color: white;
-    }
-
-    .formulario2 form input[type="submit"] {
-        background-color: rgb(12, 12, 12);
-        color: rgb(245, 245, 245);
-    }
-
-    .formulario2 form input[type="submit"]:active {
-        background-color: rgb(35, 35, 35);
-    }
-
-    .formulario2 form textarea {
-        width: 250px;
-        height: 50px;
-        border-radius: 5px;
-        border-style: none;
-        resize: none;
-    }
-
-    .formulario2 form textarea:hover {
-        background-color: rgba(35, 35, 35, .8);
-        color: white;
     }
 
     #contacto > footer {
@@ -1750,10 +1626,6 @@ footer {
     .grid_inter {
         width: 90%;
         margin: auto;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 'titulo titulo titulo'
-                             'imagen imagen imagen'
-                             ' relato relato relato';
     }
 
     .contenedor-imagen {
@@ -1868,13 +1740,6 @@ footer {
     .grid_libertadores-gallardo {
         width: 90%;
         margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 'titulo titulo titulo'
-                             'imagen imagen imagen '
-                             'relato relato relato'
-                             'eterno eterno eterno';
-        row-gap: 15px;
     }
 
     .contenedor__img__libertadores {
@@ -1905,16 +1770,9 @@ footer {
         width: 90%;
         margin: auto;
         padding-top: 40px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 'titulo titulo'
-                             'tarjetas tarjetas'
-                             'tarjetas tarjetas';
-        row-gap: 12px;
     }
     
     .titulo__historia {
-        grid-area: titulo;
         text-align: center;
     }
     
@@ -1923,7 +1781,6 @@ footer {
     .contenedor_tarjeta_pro,
     .contenedor__tarjeta_decada,
     .contenedor__tarjetas_descenso {
-        grid-area: tarjetas;
         padding-top: 40px;
         flex-direction: row;
         column-gap: 60px;
@@ -2091,13 +1948,6 @@ footer {
         font-size: 1.5rem;
     }
 
-    .formulario1 label {
-        width: 100%;
-        font-weight: bold;
-    }
-
-
-
 
     /* SEGUNDO FORMULARIO */
 
@@ -2118,17 +1968,8 @@ footer {
         padding-bottom: 20px;
     }
 
-    .formulario2 form {
-        display: flex;
-        flex-direction: column;
-        row-gap: 15px;
-    }
-
     .formulario2 form input {
         width: 300px;
-        height: 30px;
-        border-radius: 5px;
-        border-style: none;
     }
 
     .formulario2 form input:hover {
@@ -2147,10 +1988,6 @@ footer {
 
     .formulario2 form textarea {
         width: 300px;
-        height: 50px;
-        border-radius: 5px;
-        border-style: none;
-        resize: none;
     }
 
     .formulario2 form textarea:hover {
@@ -2270,7 +2107,5 @@ footer {
     .formulario__registro input[type="submit"]:active {
         background-color: rgb(217, 7, 26);
     }
-    
-
-
+ 
 }
