@@ -47,94 +47,31 @@ footer {
 
 /* BARRA */
 
-.contenedor {
-    width: 100%;
-    background-color: rgb(35, 35, 35);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.contenedor img {
-    margin-top: 10px;
-    width: 50px;
-    animation-name: salto;
-    animation-duration: .2s;
-    animation-iteration-count: 3;
-    animation-direction: alternate;
-}
-
-.contenedor p {
-    font-size: 1.5rem;
-    display: none;
-}
-
-.contenedor li > ul {
-    display: none;      /* SUBMENU */
-}
-
-.barra__izquierda {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.barra__derecha {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.barra__derecha li {
-    margin-bottom: 8px;
-}
-
-.barra__derecha li a {
-    color: white;
-}
-
-.barra__derecha {
-    display: none;
-}
-
-
-/* INICIO */
-
-#inicio {
+.inicio {
     height: 100vh;
     background-image: linear-gradient(
         0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../imagenes/fondo_principal-mobile.jpg);
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    )
+    ,url(../imagenes/fondo_principal-mobile.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 700px;
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-}
-
-.imagen-fondo {
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .eslogan {
     font-family: 'Dancing Script';
+    color: white;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .eslogan h1 {
@@ -143,8 +80,8 @@ footer {
 }
 
 .eslogan p {
-    font-size: 1.25rem;
-    margin-top: 8px;
+    font-size: 1.5rem;
+    text-align: center
 }
 
 
@@ -386,7 +323,7 @@ footer {
     border-bottom: 1px solid rgba( 35, 35, 35, .5);
 }
 
-.grid_inter {
+.contenedor_inter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -424,9 +361,11 @@ footer {
 
 
 
-.container-plantel-2018 {
+#container-plantel_2018 {
+    width: 90%;
+    margin: auto;
     margin-top: 30px;
-    border-bottom: 1px solid rgba(35, 35, 35, .5);
+    border-bottom: 1px solid gray;
 }
 
 .titulo_gallardo {
@@ -457,11 +396,6 @@ footer {
 .img_plantel {
     margin-top: 15px;
     width: 100%;
-    height: 21.5rem;
-    background-image: url(../imagenes/plantel_gallardo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .plantel_titular {
@@ -631,7 +565,6 @@ footer {
     align-items: center;
     row-gap: 10px;
 }
-
 
 .titulo_tarjeta {
     font-size: 1.1rem;
@@ -849,25 +782,15 @@ footer {
 
 
 .pie-de-pagina {
-    background-color: rgb(35, 35, 35);
     color: rgb(245, 245, 245);
 }
 
-.grid-footer {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 'escudo copy redes';
-}
-
 .escudo {
-    grid-area: escudo;
     text-align: center;
     vertical-align: middle;
 }
 
 .redes_sociales {
-    grid-area: redes;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -911,9 +834,8 @@ footer {
 }
 
 
-
-
 /* INICIO DE LA PAGINA CONTACTO */
+
 
 #contacto {
     background-color: rgb(237, 27, 46);
@@ -1135,12 +1057,659 @@ footer {
     background-color: rgb(217, 7, 26);
 }
 
+/* MEDIA QUERY 1020 (DESKTOP) */
 
 
+
+@media (min-width: 1020px) {
+
+
+    /* RESETEO DESKTOP */
+
+    .titulo-libertadores h2,
+    .titulo_torneo h2,
+    .titulo_intercontinental h2,
+    .titulo__libertadores_gallardo h2,
+    .titulo__supercopa h2 {
+        font-size: 2rem;
+    }
+
+
+    .titulo-libertadores h3,
+    .titulo_torneo h3,
+    .titulo_intercontinental h3,
+    .titulo__libertadores_gallardo h3,
+    .titulo__supercopa h3 {
+        font-size: 1.2rem;
+    }
+
+    .relato-cam-nac,
+    .relato-lib-bambino,
+    .relato-lib-gallardo,
+    .relato-supercopa,
+    .relato__intercontinental {
+        font-size: 1rem
+    }
+
+    .conferencia,
+    .conferencia__lib {
+        font-size: 1rem;
+    }
+
+
+    .mobile {
+        width: 100%
+    }
+
+
+    .contenedor {
+        column-gap: 500px;
+    }
+
+    #inicio{
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url(../imagenes/fondo_principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+
+
+    /* PLANTEL 1986 */
+    
+    .plantel {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1.25rem;
+    }
+    
+    .tarjeta-plantel {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+
+    .imagen_plantel {
+        order: 1;
+    }
+
+    .titulares__nombres li,
+    .suplentes__nombres li {
+        padding-bottom: 5px;
+    }
+
+    .suplentes__nombres {
+        margin-top: 60px;
+        order: 2;
+    }
+
+    .titulares__nombres li:hover,
+    .suplentes__nombres li:hover {
+        border-bottom: 1px solid rgb(237, 27, 46);
+    }
+
+
+
+
+
+    /* TORNEO NACIONAL */
+
+    #torneo-bambino {
+        background-color: rgb(12, 12, 12);
+    }
+
+    .grid_torneo {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: '. . titulo'
+                             'relato relato imagen'
+                             'relato relato imagen'
+                             'conferencia conferencia .';
+    }
+
+
+    .titulo_torneo {
+        color: rgb(245, 245, 245);
+        text-align: start;
+        margin-top: 30px
+    }
+
+    .relato-cam-nac {
+        color: rgb(245, 245, 245);
+        width: 90%;
+        margin-right: auto;
+    }
+
+    .relato-cam-nac a {
+        color: rgb(245, 245, 245);
+    }
+
+    .conferencia {
+        color: rgb(245, 245, 245);
+        padding-bottom: 20px;
+    }
+
+    .contenedor__imagen-campeonato {
+        height: auto;
+        background-size: cover;
+        align-self: center;
+        background-image: url(../imagenes/1986_torneo.jpg);
+    }
+
+
+
+    /* INICIO DE LA SECCION LIBERTADORES 1986 */
+
+
+    .grid_libertadores {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 'titulo titulo .'
+                             'imagen relato relato'
+                             'imagen relato relato'
+                             'conferencia conferencia conferencia';
+    }
+
+    .titulo-libertadores {
+        text-align: start;
+    }
+
+    .relato-lib-bambino {
+        width: 95%;
+        margin: auto
+    }
+
+    .contenedor__imagen-lib {
+        align-self: center;
+        height: 300px;
+    }
+
+    .conferencia__lib {
+        padding-bottom: 20px;
+    }
+
+
+
+    /* INICIO DE LA SECCION INTERCONTINENTAL */
+
+
+    #copa-intercontinental {
+        margin: auto;
+        background-color: rgb(237, 27, 46);
+        color: rgb(245, 245, 245);
+    }
+
+
+    .titulo_intercontinental {
+        padding-top: 50px;
+    }
+
+    .contenedor-imagen {
+        width: 60%;
+        justify-self: center;
+    }
+
+    .relato__intercontinental {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+
+
+    /* SECCION 2018 */
+
+
+
+    /* PLANTEL 2018 */
+    
+    .titulo_gallardo {
+        padding-top: 50px;
+    }
+    
+    .tarjeta_plantel_gallardo {
+        flex-wrap: nowrap;
+        column-gap: 50px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .plantel_titular {
+        order: 0;
+    }
+
+    .plantel_suplente {
+        order: 2;
+    }
+
+    .img_plantel {
+        width: 50%;
+        order: 1;
+    }
+
+    .tarjeta_plantel_gallardo li {
+        padding-bottom: 5px;
+    }
+
+    .tarjeta_plantel_gallardo li:hover {
+        border-bottom: 1px solid rgb(237, 27, 46);
+    }
+
+
+
+
+    /* SECCION SUPERCOPA */
+
+    .grid__supercopa {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: '. . titulo'
+                             'relato relato imagen'
+                             'relato relato imagen';
+        row-gap: 30px;
+        padding-bottom: 20px;
+    }
+
+    .titulo__supercopa {
+        justify-self: start;
+
+    }
+
+    .contenedor__imagen_relato {
+        align-self: center;
+        height: 300px;
+    }
+
+    .relato-supercopa {
+        width: 90%;
+        margin-right: auto;
+    }
+
+
+    /* LIBERTADORES 2018 */
+
+
+    #libertadores-gallardo {
+        margin: 0;
+        padding-top: 50px;
+        background-color: rgb(12, 12, 12);
+        color: rgb(245, 245, 245);
+    }
+
+    .contenedor__img__libertadores {
+        height: 300px;
+        align-self: center;
+    }
+
+    .titulo__libertadores_gallardo {
+        text-align: center;
+    }
+
+    .relato-lib-gallardo {
+        text-align: center;
+    }
+
+    .contenedor__parrafo_gallardo {
+        padding-top: 20px;
+        color: rgb(255, 197, 42)
+    }
+
+
+
+
+
+    /* SECCION NUESTRA HISTORIA */
+
+    .grid-nuestra-historia {
+        padding-top: 40px;
+    }
+    
+    .titulo__historia {
+        text-align: center;
+    }
+    
+    .contenedor__tarjetas-historia,
+    .contenedor__tarjetas-amateur,
+    .contenedor_tarjeta_pro,
+    .contenedor__tarjeta_decada,
+    .contenedor__tarjetas_descenso {
+        padding-top: 40px;
+        flex-direction: row;
+        column-gap: 60px;
+    }
+    
+    .tarjeta__historia {
+        width: 100%;
+        height: 25rem;
+        border: 1px solid black;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .titulo__historia,
+    .titulo__amateur,
+    .titulo__profesionalismo,
+    .titulo__decada-noventa,
+    .titulo__descenso {
+        font-size: 1.7rem;
+    }
+
+    .tarjeta__historia p,
+    .tarjeta__amateur p,
+    .tarjeta__profesionalismo p,
+    .tarjeta_decada p,
+    .tarjeta__descenso p {
+        align-self: center;
+        text-align: center;
+        font-size: .9rem;
+    }
+
+
+    /* AMATEUR */
+
+
+    .grid-amateur {
+        padding-top: 60px;
+    }
+
+    .tarjeta__amateur {
+        width: 100%;
+        height: 25rem;
+        border: 1px solid black;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+
+
+    /* PROFESIONALISMO */
+
+    .grid-profesionalismo {
+        padding-top: 60px;
+    }
+
+    .tarjeta__profesionalismo {
+        width: 100%;
+        height: 25rem;
+        border: 1px solid black;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+
+
+    /* DECADA NOVENTA */
+
+    .grid-noventa {
+        padding-top: 60px;
+    }
+
+    .tarjeta_decada {
+        width: 100%;
+        height: 25rem;
+        border: 1px solid black;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+
+
+    /* DESCENSO */
+
+    .grid-descenso {
+        padding-top: 60px;
+    }
+
+    .tarjeta__descenso {
+        width: 100%;
+        height: 25rem;
+        border: 1px solid black;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+
+
+
+    /* PAGINA CONTACTO */
+
+    .contenedor__formularios {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 300px;
+    }
+
+    /* INICIO DE LA PAGINA CONTACTO */
+
+
+
+    .gracias_titulo {
+        font-size: 1.5rem;
+        padding-bottom: 30px;
+    }
+
+    .contenedor__formularios {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    /* PRIMER FORMULARIO */
+
+
+    .formulario1 {
+        row-gap: 8px;
+    }
+
+    .formulario1 p {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+
+    /* SEGUNDO FORMULARIO */
+
+
+    .contenedor__formulario2 {
+        justify-content: flex-end
+    }
+
+    .formulario2 {
+        padding: 30px 30px;
+        background-color: rgb(12, 12, 12);
+    }
+
+
+
+    .formulario2 p {
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+
+    .formulario2 form input {
+        width: 300px;
+    }
+
+    .formulario2 form input:hover {
+        background-color: rgba(217, 7, 26, .8);
+        color: white;
+    }
+
+    .formulario2 form input[type="submit"] {
+        background-color: rgb(237, 27, 46);
+        color: rgb(245, 245, 245);
+    }
+
+    .formulario2 form input[type="submit"]:active {
+        background-color: rgb(217, 7, 26);
+    }
+
+    .formulario2 form textarea {
+        width: 300px;
+    }
+
+    .formulario2 form textarea:hover {
+        background-color: rgba(217, 7, 26, .8);
+        color: white;
+    }
+
+
+
+    /* PAGINA GRACIAS */
+
+
+    .contenedor__gracias {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 176px);
+    }
+    
+    .gracias {
+        text-align: center;
+        margin: 50px;
+    }
+    
+    .gracias h1 {
+        margin-bottom: 15px;
+        font-size: 4rem;
+    }
+
+    .gracias p {
+        font-size: 1.2rem;
+    }
+    
+    .registro {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    
+    .registro small {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    
+    .registro a {
+        color: inherit;
+    }
+    
+    .registro span {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: rgb(237, 27, 46);
+    }
+    
+    .contenedor__gracias > footer {
+        position: absolute;
+        bottom: 0;
+    }
+    
+    
+    
+    
+    
+    /* INICIO DE LA PAGINA REGISTRO */
+    
+    
+    
+    
+    
+    .contenedor__registro {
+        height: calc(100vh - 176px);
+        margin: auto;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .registrate {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .formulario__registro form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    
+    .password {
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    
+    .formulario__registro input {
+        width: 350px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1.5px solid rgb(12, 12, 12);
+        color: black;
+    }
+    
+    .formulario__registro input:hover {
+        color: rgb(12, 12, 12)
+    }
+    
+    .formulario__registro input[type="submit"] {
+        background-color: rgb(237, 27, 46);
+        color: rgb(245, 245, 245);
+        font-weight: bold;
+    }
+    
+    .formulario__registro input[type="submit"]:active {
+        background-color: rgb(217, 7, 26);
+    }
+ 
+}
 
 
 
 /* MEDIA QUERY 768PX (TABLET)*/
+
+
 
 @media (min-width: 768px) {
 
@@ -1403,709 +1972,5 @@ footer {
 
 
 
-/* MEDIA QUERY 1020 (DESKTOP) */
 
 
-@media (min-width: 1020px) {
-
-
-    /* RESETEO DESKTOP */
-
-    .titulo-libertadores h2,
-    .titulo_torneo h2,
-    .titulo_intercontinental h2,
-    .titulo__libertadores_gallardo h2,
-    .titulo__supercopa h2 {
-        font-size: 2rem;
-    }
-
-
-    .titulo-libertadores h3,
-    .titulo_torneo h3,
-    .titulo_intercontinental h3,
-    .titulo__libertadores_gallardo h3,
-    .titulo__supercopa h3 {
-        font-size: 1.2rem;
-    }
-
-    .relato-cam-nac,
-    .relato-lib-bambino,
-    .relato-lib-gallardo,
-    .relato-supercopa,
-    .relato__intercontinental {
-        font-size: 1rem
-    }
-
-    .conferencia,
-    .conferencia__lib {
-        font-size: 1rem;
-    }
-
-
-    .mobile {
-        width: 100%
-    }
-
-
-    .contenedor {
-        column-gap: 500px;
-    }
-
-    #inicio{
-    height: 100vh;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-        )
-        ,url(../imagenes/fondo_principal.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    }
-
-
-    /* PLANTEL 1986 */
-
-
-    .grid_plantel {
-        width: 90%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'titulo titulo titulo'
-                             'subtitulo subtitulo subtitulo'
-                             'plantel plantel plantel';
-        row-gap: 15px;
-    }
-    
-    .titulo-seccion {
-        grid-area: titulo;
-    }
-    
-    .plantel {
-        grid-area: subtitulo;
-        text-align: center;
-        margin-top: 20px;
-        font-size: 1.25rem;
-    }
-    
-    .tarjeta-plantel {
-        grid-area: plantel;
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-
-    .titulo-seccion h2 {
-        font-size: 2rem;
-        margin-top: 50px;
-    }
-
-
-    .imagen_plantel {
-        order: 1;
-    }
-
-    .titulares__nombres li,
-    .suplentes__nombres li {
-        padding-bottom: 5px;
-    }
-
-    .suplentes__nombres {
-        margin-top: 60px;
-        order: 2;
-    }
-
-    .titulares__nombres li:hover,
-    .suplentes__nombres li:hover {
-        border-bottom: 1px solid rgb(237, 27, 46);
-    }
-
-
-
-
-
-    /* TORNEO NACIONAL */
-
-    #torneo-bambino {
-        background-color: rgb(12, 12, 12);
-    }
-
-    .grid_torneo {
-        width: 90%;
-        margin: auto;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: '. . titulo'
-                             'relato relato imagen'
-                             'relato relato imagen'
-                             'conferencia conferencia .';
-    }
-
-
-    .titulo_torneo {
-        color: rgb(245, 245, 245);
-        text-align: start;
-        margin-top: 30px
-    }
-
-    .relato-cam-nac {
-        color: rgb(245, 245, 245);
-        width: 90%;
-        margin-right: auto;
-    }
-
-    .relato-cam-nac a {
-        color: rgb(245, 245, 245);
-    }
-
-    .conferencia {
-        color: rgb(245, 245, 245);
-        padding-bottom: 20px;
-    }
-
-    .contenedor__imagen-campeonato {
-        height: 300px;
-        background-size: cover;
-        align-self: center;
-        background-image: url(../imagenes/1986_torneo.jpg);
-    }
-
-
-
-    /* INICIO DE LA SECCION LIBERTADORES 1986 */
-
-
-    .grid_libertadores {
-        width: 90%;
-        margin: auto;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 'titulo titulo .'
-                             'imagen relato relato'
-                             'imagen relato relato'
-                             'conferencia conferencia conferencia';
-    }
-
-    .titulo-libertadores {
-        text-align: start;
-    }
-
-    .relato-lib-bambino {
-        width: 95%;
-        margin: auto
-    }
-
-    .contenedor__imagen-lib {
-        align-self: center;
-        height: 300px;
-    }
-
-    .conferencia__lib {
-        padding-bottom: 20px;
-    }
-
-
-
-    /* INICIO DE LA SECCION INTERCONTINENTAL */
-
-
-    #copa-intercontinental {
-        margin: auto;
-        background-color: rgb(237, 27, 46);
-        color: rgb(245, 245, 245);
-    }
-
-
-    .titulo_intercontinental {
-        padding-top: 50px;
-    }
-
-    .grid_inter {
-        width: 90%;
-        margin: auto;
-    }
-
-    .contenedor-imagen {
-        width: 60%;
-        justify-self: center;
-    }
-
-    .relato__intercontinental {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-
-
-    /* SECCION 2018 */
-
-
-
-    /* PLANTEL 2018 */
-
-    .grid_plantel_2018 {
-        width: 90%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 'titulo titulo titulo'
-                             'plantel plantel plantel'
-                             'tarjeta tarjeta tarjeta';
-    }
-    
-    .titulo_gallardo {
-        grid-area: titulo;
-        padding-top: 50px;
-    }
-    
-    .plantel {
-        grid-area: plantel;
-    }
-    
-    .tarjeta_plantel_gallardo {
-        grid-area: tarjeta;
-        flex-wrap: nowrap;
-        column-gap: 50px;
-        text-align: center;
-        padding-bottom: 20px;
-    }
-
-    .plantel_titular {
-        order: 0;
-    }
-
-    .plantel_suplente {
-        order: 2;
-    }
-
-    .img_plantel {
-        width: 50%;
-        order: 1;
-    }
-
-    .tarjeta_plantel_gallardo li {
-        padding-bottom: 5px;
-    }
-
-    .tarjeta_plantel_gallardo li:hover {
-        border-bottom: 1px solid rgb(237, 27, 46);
-    }
-
-
-
-
-    /* SECCION SUPERCOPA */
-
-    .grid__supercopa {
-        width: 90%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: '. . titulo'
-                             'relato relato imagen'
-                             'relato relato imagen';
-        row-gap: 30px;
-        padding-bottom: 20px;
-    }
-
-    .titulo__supercopa {
-        justify-self: start;
-
-    }
-
-    .contenedor__imagen_relato {
-        align-self: center;
-        height: 300px;
-    }
-
-    .relato-supercopa {
-        width: 90%;
-        margin-right: auto;
-    }
-
-
-    /* LIBERTADORES 2018 */
-
-
-    #libertadores-gallardo {
-        margin: 0;
-        padding-top: 50px;
-        background-color: rgb(12, 12, 12);
-        color: rgb(245, 245, 245);
-    }
-    
-    .grid_libertadores-gallardo {
-        width: 90%;
-        margin: auto;
-    }
-
-    .contenedor__img__libertadores {
-        height: 300px;
-        align-self: center;
-    }
-
-    .titulo__libertadores_gallardo {
-        text-align: center;
-    }
-
-    .relato-lib-gallardo {
-        text-align: center;
-    }
-
-    .contenedor__parrafo_gallardo {
-        padding-top: 20px;
-        color: rgb(255, 197, 42)
-    }
-
-
-
-
-
-    /* SECCION NUESTRA HISTORIA */
-
-    .grid-nuestra-historia {
-        width: 90%;
-        margin: auto;
-        padding-top: 40px;
-    }
-    
-    .titulo__historia {
-        text-align: center;
-    }
-    
-    .contenedor__tarjetas-historia,
-    .contenedor__tarjetas-amateur,
-    .contenedor_tarjeta_pro,
-    .contenedor__tarjeta_decada,
-    .contenedor__tarjetas_descenso {
-        padding-top: 40px;
-        flex-direction: row;
-        column-gap: 60px;
-    }
-    
-    .tarjeta__historia {
-        width: 100%;
-        height: 25rem;
-        border: 1px solid black;
-        font-size: .8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-    }
-
-    .titulo__historia,
-    .titulo__amateur,
-    .titulo__profesionalismo,
-    .titulo__decada-noventa,
-    .titulo__descenso {
-        font-size: 1.7rem;
-    }
-
-    .tarjeta__historia p,
-    .tarjeta__amateur p,
-    .tarjeta__profesionalismo p,
-    .tarjeta_decada p,
-    .tarjeta__descenso p {
-        text-align: center;
-        font-size: .9rem;
-    }
-
-
-    /* AMATEUR */
-
-
-    .grid-amateur {
-        width: 90%;
-        margin: auto;
-        padding-top: 60px;
-    }
-
-    .tarjeta__amateur {
-        width: 100%;
-        height: 25rem;
-        border: 1px solid black;
-        font-size: .8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-    }
-
-
-
-    /* PROFESIONALISMO */
-
-    .grid-profesionalismo {
-        width: 90%;
-        margin: auto;
-        padding-top: 60px;
-    }
-
-    .tarjeta__profesionalismo {
-        width: 100%;
-        height: 25rem;
-        border: 1px solid black;
-        font-size: .8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-    }
-
-
-
-    /* DECADA NOVENTA */
-
-    .grid-noventa {
-        width: 90%;
-        margin: auto;
-        padding-top: 60px;
-    }
-
-    .tarjeta_decada {
-        width: 100%;
-        height: 25rem;
-        border: 1px solid black;
-        font-size: .8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-    }
-
-
-
-    /* DESCENSO */
-
-    .grid-descenso {
-        width: 90%;
-        margin: auto;
-        padding-top: 60px;
-    }
-
-    .tarjeta__descenso {
-        width: 100%;
-        height: 25rem;
-        border: 1px solid black;
-        font-size: .8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-    }
-
-
-
-
-    /* PAGINA CONTACTO */
-
-    .contenedor__formularios {
-        width: 90%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 300px;
-    }
-
-    /* INICIO DE LA PAGINA CONTACTO */
-
-
-
-    .gracias_titulo {
-        font-size: 1.5rem;
-        padding-bottom: 30px;
-    }
-
-    .contenedor__formularios {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-
-
-    /* PRIMER FORMULARIO */
-
-
-    .formulario1 {
-        row-gap: 8px;
-    }
-
-    .formulario1 p {
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
-
-
-    /* SEGUNDO FORMULARIO */
-
-
-    .contenedor__formulario2 {
-        justify-content: flex-end
-    }
-
-    .formulario2 {
-        padding: 30px 30px;
-        background-color: rgb(12, 12, 12);
-    }
-
-
-
-    .formulario2 p {
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-    }
-
-    .formulario2 form input {
-        width: 300px;
-    }
-
-    .formulario2 form input:hover {
-        background-color: rgba(217, 7, 26, .8);
-        color: white;
-    }
-
-    .formulario2 form input[type="submit"] {
-        background-color: rgb(237, 27, 46);
-        color: rgb(245, 245, 245);
-    }
-
-    .formulario2 form input[type="submit"]:active {
-        background-color: rgb(217, 7, 26);
-    }
-
-    .formulario2 form textarea {
-        width: 300px;
-    }
-
-    .formulario2 form textarea:hover {
-        background-color: rgba(217, 7, 26, .8);
-        color: white;
-    }
-
-
-
-    /* PAGINA GRACIAS */
-
-
-    .contenedor__gracias {
-        margin-top: 80px;
-        display: flex;
-        align-items: center;
-        height: calc(100vh - 176px);
-    }
-    
-    .gracias {
-        text-align: center;
-        margin: 50px;
-    }
-    
-    .gracias h1 {
-        margin-bottom: 15px;
-        font-size: 4rem;
-    }
-
-    .gracias p {
-        font-size: 1.2rem;
-    }
-    
-    .registro {
-        text-align: center;
-        font-size: 1.1rem;
-    }
-    
-    .registro small {
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
-    
-    .registro a {
-        color: inherit;
-    }
-    
-    .registro span {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: rgb(237, 27, 46);
-    }
-    
-    .contenedor__gracias > footer {
-        position: absolute;
-        bottom: 0;
-    }
-    
-    
-    
-    
-    
-    /* INICIO DE LA PAGINA REGISTRO */
-    
-    
-    
-    
-    
-    .contenedor__registro {
-        height: calc(100vh - 176px);
-        margin: auto;
-        margin-top: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .registrate {
-        text-align: center;
-        font-size: 1.3rem;
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
-    
-    .formulario__registro form {
-        display: flex;
-        flex-direction: column;
-        row-gap: 15px;
-    }
-    
-    .password {
-        font-size: .8rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 5px;
-    }
-    
-    .formulario__registro input {
-        width: 350px;
-        height: 40px;
-        border-radius: 5px;
-        border: 1.5px solid rgb(12, 12, 12);
-        color: black;
-    }
-    
-    .formulario__registro input:hover {
-        color: rgb(12, 12, 12)
-    }
-    
-    .formulario__registro input[type="submit"] {
-        background-color: rgb(237, 27, 46);
-        color: rgb(245, 245, 245);
-        font-weight: bold;
-    }
-    
-    .formulario__registro input[type="submit"]:active {
-        background-color: rgb(217, 7, 26);
-    }
- 
-}
