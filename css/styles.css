@@ -1,0 +1,495 @@
+@keyframes salto {
+  from {
+    transform: translate(0, 5px); }
+  to {
+    transform: translate(0); } }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  background-color: whitesmoke;
+  color: #232323; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.logo img {
+  animation-name: salto;
+  animation-duration: .2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-delay: .5s; }
+
+#inicio {
+  height: 100vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo_principal-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; }
+  #inicio .eslogan {
+    font-family: 'Dancing Script', cursive;
+    color: whitesmoke;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #inicio .eslogan h1 {
+      font-size: 50px; }
+    #inicio .eslogan p {
+      text-align: center;
+      font-size: 20px; }
+
+.plantel_titulo h2 {
+  padding-top: 90px;
+  font-size: 35px; }
+
+.plantel_titulo p {
+  font-size: 16px; }
+
+.plantel_subtitulo {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold; }
+
+.planteles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .planteles h3 {
+    text-align: center;
+    padding: 10px 0;
+    padding-top: 20px; }
+  .planteles .plantel_titular,
+  .planteles .plantel_suplente {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid gray; }
+
+#torneo_bambino {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'titulo' 'imagen' 'conferencia' 'relato';
+  row-gap: 15px;
+  border-bottom: 1px solid gray; }
+
+.torneo_titulo {
+  text-align: center;
+  padding-top: 90px;
+  grid-area: titulo; }
+  .torneo_titulo h2 {
+    font-size: 35px; }
+  .torneo_titulo h3 {
+    font-size: 20px; }
+
+.torneo_imagen {
+  grid-area: imagen;
+  width: 100%;
+  height: 350px;
+  background: url(../imagenes/1986_torneo.jpg) no-repeat center;
+  background-size: cover; }
+
+.torneo_conferencia {
+  grid-area: conferencia; }
+  .torneo_conferencia p {
+    font-size: 16px;
+    margin: 0; }
+    .torneo_conferencia p em {
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: underline; }
+
+.torneo_relato {
+  grid-area: relato;
+  font-size: 16px; }
+
+#libertadores_bambino {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'titulo' 'imagen' 'conferencia' 'relato';
+  row-gap: 15px;
+  border-bottom: 1px solid gray; }
+  #libertadores_bambino .libertadores_titulo-bambino {
+    grid-area: titulo;
+    text-align: center; }
+    #libertadores_bambino .libertadores_titulo-bambino h2 {
+      font-size: 35px;
+      padding-top: 90px; }
+    #libertadores_bambino .libertadores_titulo-bambino h3 {
+      font-size: 20px; }
+  #libertadores_bambino .libertadores_imagen-bambino {
+    grid-area: imagen;
+    width: 100%;
+    height: 350px;
+    background: url(../imagenes/river-libertadores-1986.jpg) no-repeat center;
+    background-size: cover; }
+  #libertadores_bambino .libertadores_conferencia {
+    grid-area: conferencia; }
+    #libertadores_bambino .libertadores_conferencia p {
+      font-size: 16px;
+      margin: 0; }
+      #libertadores_bambino .libertadores_conferencia p em {
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: underline; }
+  #libertadores_bambino .libertadores_relato-bambino {
+    grid-area: relato;
+    font-size: 16px; }
+
+#intercontinental {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  border-bottom: 1px solid gray; }
+  #intercontinental .inter_titulo {
+    text-align: center; }
+    #intercontinental .inter_titulo h2 {
+      padding-top: 90px;
+      font-size: 35px; }
+    #intercontinental .inter_titulo h3 {
+      font-size: 20px; }
+  #intercontinental .inter_imagen {
+    width: 100%;
+    height: 350px;
+    background: url(../imagenes/copa_intercontinental.jpg) no-repeat center;
+    background-size: cover; }
+  #intercontinental .inter_relato {
+    text-align: center;
+    font-size: 16px; }
+    #intercontinental .inter_relato strong {
+      font-weight: bold; }
+
+#supercopa {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'titulo' 'imagen' 'relato';
+  row-gap: 15px;
+  border-bottom: 1px solid gray; }
+  #supercopa .supercopa_titulo {
+    grid-area: titulo;
+    text-align: center; }
+    #supercopa .supercopa_titulo h2 {
+      padding-top: 90px;
+      font-size: 35px; }
+    #supercopa .supercopa_titulo h3 {
+      font-size: 20px; }
+  #supercopa .supercopa_imagen {
+    grid-area: imagen;
+    width: 100%;
+    height: 350px;
+    background: url(../imagenes/foto_supercopa.jpg) no-repeat center;
+    background-size: cover; }
+  #supercopa .supercopa_relato {
+    grid-area: relato;
+    font-size: 16px; }
+    #supercopa .supercopa_relato :nth-child(2) {
+      text-align: center;
+      font-style: italic; }
+
+#libertadores_gallardo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  border-bottom: 1px solid gray; }
+  #libertadores_gallardo .libertadores_gallardo-titulo {
+    text-align: center; }
+    #libertadores_gallardo .libertadores_gallardo-titulo h2 {
+      padding-top: 90px;
+      font-size: 35px; }
+    #libertadores_gallardo .libertadores_gallardo-titulo h3 {
+      font-size: 20px; }
+  #libertadores_gallardo .libertadores_imagen-gallardo {
+    width: 100%;
+    height: 350px;
+    background: url(../imagenes/plantel_2018.jpg) no-repeat center;
+    background-size: cover; }
+  #libertadores_gallardo .libertadores_relato-gallardo {
+    font-size: 16px; }
+  #libertadores_gallardo .libertadores_eslogan {
+    text-align: center;
+    font-weight: bold; }
+
+.tarjetas {
+  width: 100%;
+  height: 200px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black; }
+  .tarjetas h3 {
+    font-size: 22px;
+    text-align: center; }
+  .tarjetas p {
+    width: 90%;
+    margin: auto;
+    display: none; }
+
+.tarjeta_uno:hover p,
+.tarjeta_dos:hover p,
+.tarjeta_tres:hover p,
+.tarjeta_cuatro:hover p,
+.tarjeta_cinco:hover p,
+.tarjeta_seis:hover p,
+.tarjeta_siete:hover p,
+.tarjeta_ocho:hover p,
+.tarjeta_nueve:hover p,
+.tarjeta_diez:hover p,
+.tarjeta_once:hover p,
+.tarjeta_doce:hover p {
+  display: block; }
+
+.tarjeta_uno:hover h3,
+.tarjeta_dos:hover h3,
+.tarjeta_tres:hover h3,
+.tarjeta_cuatro:hover h3,
+.tarjeta_cinco:hover h3,
+.tarjeta_seis:hover h3,
+.tarjeta_siete:hover h3,
+.tarjeta_ocho:hover h3,
+.tarjeta_nueve:hover h3,
+.tarjeta_diez:hover h3,
+.tarjeta_once:hover h3,
+.tarjeta_doce:hover h3 {
+  display: none; }
+
+#nacimiento .nacimiento_titulo h2 {
+  padding-top: 90px;
+  padding-bottom: 30px;
+  font-size: 35px;
+  text-align: center; }
+
+#nacimiento .contenedor_tarjeta-nacimiento {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px; }
+
+#amateur h2 {
+  padding-top: 90px;
+  padding-bottom: 30px;
+  font-size: 35px;
+  text-align: center; }
+
+#amateur .contenedor_era-amateur {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px; }
+
+#profesionalismo h2 {
+  padding-top: 90px;
+  padding-bottom: 30px;
+  font-size: 35px;
+  text-align: center; }
+
+#profesionalismo .contenedor_profesionalismo {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px; }
+
+#noventa h2 {
+  padding-top: 90px;
+  padding-bottom: 30px;
+  font-size: 35px;
+  text-align: center; }
+
+#noventa .contenedor_tarjeta-noventa {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px; }
+
+#descenso h2 {
+  padding-top: 90px;
+  padding-bottom: 30px;
+  font-size: 35px;
+  text-align: center; }
+
+#descenso .contenedor_descenso {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px; }
+
+.pie {
+  margin-top: 15px;
+  padding-top: 10px; }
+  .pie .copy {
+    text-align: center;
+    font-size: 15px; }
+  .pie .redes {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px; }
+    .pie .redes button {
+      color: whitesmoke;
+      font-size: 20px;
+      background: none;
+      border: none; }
+      .pie .redes button :hover {
+        color: #ed1b2e; }
+  .pie .pie_logo {
+    text-align: center; }
+
+#contacto {
+  height: 100vh;
+  position: relative;
+  background-color: #ed1b2e;
+  color: whitesmoke;
+  text-align: center; }
+  #contacto .pie {
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+
+.contenedor_contacto h1 {
+  padding: 50px 0; }
+
+.contenedor_contacto .formulario_contacto {
+  display: flex;
+  flex-direction: column; }
+  .contenedor_contacto .formulario_contacto p {
+    font-size: 20px;
+    font-weight: bold; }
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.mensaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px; }
+  .mensaje input {
+    width: 60%;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px; }
+  .mensaje textarea {
+    width: 60%;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px; }
+  .mensaje input[type="submit"] {
+    color: whitesmoke;
+    background-color: #232323;
+    width: 50%;
+    height: 30px; }
+    .mensaje input[type="submit"] :active {
+      background-color: black; }
+
+.contenedor_gracias {
+  height: 100vh;
+  text-align: center; }
+  .contenedor_gracias h1 {
+    padding-top: 90px;
+    font-size: 35px; }
+  .contenedor_gracias :nth-child(2) {
+    padding-top: 30px; }
+  .contenedor_gracias :last-child {
+    padding-top: 20px; }
+    .contenedor_gracias :last-child span {
+      font-weight: bold; }
+    .contenedor_gracias :last-child :last-child {
+      text-transform: uppercase;
+      color: #ed1b2e;
+      text-decoration: underline; }
+
+#registro {
+  position: relative;
+  height: 100vh; }
+  #registro .pie {
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+
+.contenedor_registrar {
+  text-align: center; }
+  .contenedor_registrar h1 {
+    padding-top: 90px; }
+  .contenedor_registrar .formulario_registrar {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px; }
+    .contenedor_registrar .formulario_registrar input {
+      width: 70%;
+      height: 40px;
+      background-color: whitesmoke;
+      border: 1px solid #232323;
+      border-radius: 5px; }
+    .contenedor_registrar .formulario_registrar input[type="submit"] {
+      margin-top: 15px;
+      width: 50%;
+      background-color: #232323;
+      color: whitesmoke; }
+
+@media (min-width: 768px) {
+  #inicio {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo_principal-tablet.jpg); }
+    #inicio .eslogan h1 {
+      font-size: 60px; } }
+
+@media (min-width: 992px) {
+  #inicio .eslogan h1 {
+    font-size: 80px; }
+  #inicio .eslogan p {
+    font-size: 30px; }
+  .planteles {
+    padding-top: 50px;
+    flex-direction: row;
+    border-bottom: 1px solid gray; }
+    .planteles .plantel_titular,
+    .planteles .plantel_suplente {
+      border: none; }
+  #torneo_bambino {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'titulo .' 'imagen relato' 'conferencia conferencia';
+    column-gap: 25px; }
+    #torneo_bambino .torneo_titulo {
+      text-align: start; }
+  #libertadores_bambino {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'titulo titulo' 'relato imagen' 'conferencia conferencia';
+    column-gap: 25px; }
+  .contenedor_contacto .mensaje p {
+    padding-top: 20px; }
+  .contenedor_contacto .mensaje input {
+    width: 30%; }
+  .contenedor_contacto .mensaje textarea {
+    width: 30%; } }
+
+@media (min-width: 1200px) {
+  .tarjetas {
+    width: 30%;
+    height: 500px;
+    flex-direction: row; }
+    .tarjetas p {
+      text-align: center;
+      font-size: 15px; }
+  #nacimiento .contenedor_tarjeta-nacimiento {
+    justify-content: space-evenly; }
+  #amateur .contenedor_era-amateur {
+    justify-content: space-evenly; }
+  #profesionalismo .contenedor_profesionalismo {
+    justify-content: space-evenly; }
+  #noventa .contenedor_tarjeta-noventa {
+    justify-content: space-evenly; }
+  #descenso .contenedor_descenso {
+    justify-content: space-evenly; }
+  .contenedor_registrar .formulario_registrar input {
+    width: 30%; }
+  .contenedor_registrar .formulario_registrar input[type="submit"] {
+    width: 20%; } }
