@@ -12,7 +12,7 @@ $bg-reset: no-repeat center;
 $f-subtitulo: 20px;
 $f-tarjeta: 12px;
 
-@mixin fondoImagen {
+@mixin fondoImagen() {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -125,7 +125,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     h4 {
         text-align: center;
@@ -390,12 +390,19 @@ a {
     h3 {
         font-size: 22px;
         text-align: center;
+        color: $blanco;
+
+        span {
+            font-size: 12px;
+            color: $blanco;
+        }
     }
 
     p {
         width: 90%;
         margin: auto;
         display: none;
+        color: $blanco;
     }
 }
 
@@ -429,6 +436,20 @@ a {
     display: none;
 }
 
+.tarjeta_uno:hover span,
+.tarjeta_dos:hover span,
+.tarjeta_tres:hover span,
+.tarjeta_cuatro:hover span,
+.tarjeta_cinco:hover span,
+.tarjeta_seis:hover span,
+.tarjeta_siete:hover span,
+.tarjeta_ocho:hover span,
+.tarjeta_nueve:hover span,
+.tarjeta_diez:hover span,
+.tarjeta_once:hover span,
+.tarjeta_doce:hover span {
+    display: none;
+}
 
 #nacimiento {
 
@@ -447,6 +468,34 @@ a {
         flex-wrap: wrap;
         row-gap: 20px;
     }
+
+    .tarjeta_uno {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/fundacion.jpg);
+        @include fondoImagen;
+    }
+
+    .tarjeta_dos {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/monumental.jpg);
+        @include fondoImagen;
+    }
 }
 
 #amateur {
@@ -462,6 +511,48 @@ a {
         display: flex;
         flex-wrap: wrap;
         row-gap: 20px;
+    }
+
+    .tarjeta_tres {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/debut_primera.jpg);
+        @include fondoImagen;
+    }
+
+    .tarjeta_cuatro {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/primer_superclasico.jpg);
+        @include fondoImagen;
+    }
+
+    .tarjeta_cinco {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/palermo.jpg);
+        @include fondoImagen;
     }
 }
 
@@ -479,6 +570,34 @@ a {
         flex-wrap: wrap;
         row-gap: 20px;
     }
+
+    .tarjeta_seis {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/scocco.jpg);
+        @include fondoImagen;
+    }
+
+    .tarjeta_siete {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/el_monumental.jpg);
+        @include fondoImagen;
+    }
 }
 
 #noventa {
@@ -494,6 +613,34 @@ a {
         display: flex;
         flex-wrap: wrap;
         row-gap: 20px;
+    }
+
+    .tarjeta_ocho {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/era_pasarella.jpg);
+        @include fondoImagen;
+    }
+
+    .tarjeta_nueve {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/campeon_96.jpg);
+        @include fondoImagen;
     }
 }
 
@@ -511,6 +658,48 @@ a {
         flex-wrap: wrap;
         row-gap: 20px;
     }
+
+    .tarjeta_diez {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/descenso.jpg);
+        @include fondoImagen;
+    }
+
+    .tarjeta_once {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/ascenso.jpg);
+        @include fondoImagen;
+    }
+
+    .tarjeta_doce {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8),
+            rgba(0, 0, 0, .8)
+        )
+        ,url(../imagenes/campeon_2014.jpg);
+        @include fondoImagen;
+    }
 }
 
 // DECORACION FOOTER
@@ -527,9 +716,9 @@ a {
     .redes {
         display: flex;
         justify-content: center;
-        column-gap: 8px;
+        column-gap: 12px;
 
-        button {
+        a {
             color: $blanco;
             font-size: 20px;
             background: none;
@@ -808,6 +997,25 @@ a {
     #descenso {
         .contenedor_descenso {
             justify-content: space-evenly;
+        }
+    }
+
+    .pie {
+        .redes {
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+    
+            a {
+                color: $blanco;
+                font-size: 20px;
+                background: none;
+                border: none;
+    
+                :hover{
+                    color: $rojo;
+                }
+            }
         }
     }
 
