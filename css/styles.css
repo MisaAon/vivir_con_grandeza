@@ -243,9 +243,9 @@ a {
     font-size: 22px;
     text-align: center;
     color: whitesmoke; }
-    .tarjetas h3 span {
-      font-size: 12px;
-      color: whitesmoke; }
+  .tarjetas span {
+    font-size: 12px;
+    color: whitesmoke; }
   .tarjetas p {
     width: 90%;
     margin: auto;
@@ -421,6 +421,39 @@ a {
   background-position: center;
   background-size: cover; }
 
+.suscribite {
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; }
+
+.suscripcion {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px; }
+  .suscripcion input[type="email"] {
+    width: 50%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #232323;
+    background: inherit; }
+  .suscripcion input[type="reset"] {
+    color: whitesmoke;
+    display: block;
+    background: #232323;
+    padding: 4px 6px;
+    border: none;
+    margin-left: 10px;
+    border: 1px solid inherit;
+    border-radius: 10px; }
+  .suscripcion input[type="reset"]:active {
+    color: #232323;
+    background-color: whitesmoke;
+    border: 1px solid #232323;
+    box-shadow: 0 0 8px #232323; }
+
 .pie {
   margin-top: 15px;
   padding-top: 10px; }
@@ -533,7 +566,11 @@ a {
   #inicio {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo_principal-tablet.jpg); }
     #inicio .eslogan h1 {
-      font-size: 60px; } }
+      font-size: 60px; }
+  .contenedor_contacto .mensaje input {
+    width: 40%; }
+  .contenedor_contacto .mensaje textarea {
+    width: 40%; } }
 
 @media (min-width: 992px) {
   #inicio .eslogan h1 {
@@ -568,7 +605,7 @@ a {
   .tarjetas {
     width: 30%;
     height: 500px;
-    flex-direction: row; }
+    flex-direction: column; }
     .tarjetas p {
       text-align: center;
       font-size: 15px; }
@@ -582,6 +619,22 @@ a {
     justify-content: space-evenly; }
   #descenso .contenedor_descenso {
     justify-content: space-evenly; }
+  .suscripcion {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px; }
+    .suscripcion input[type="email"] {
+      width: 20%; }
+    .suscripcion input[type="reset"] {
+      color: whitesmoke;
+      display: block;
+      background: #232323;
+      padding: 4px 6px;
+      border: none;
+      margin-left: 10px;
+      border: 1px solid inherit;
+      border-radius: 10px; }
   .pie .redes {
     display: flex;
     justify-content: center;

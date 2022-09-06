@@ -391,11 +391,11 @@ a {
         font-size: 22px;
         text-align: center;
         color: $blanco;
+    }
 
-        span {
-            font-size: 12px;
-            color: $blanco;
-        }
+    span {
+        font-size: 12px;
+        color: $blanco;
     }
 
     p {
@@ -702,6 +702,47 @@ a {
     }
 }
 
+.suscribite {
+    padding-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.suscripcion {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    input[type="email"] {
+        width: 50%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $negro;
+        background: inherit;
+    }
+
+    input[type="reset"] {
+        color: $blanco;
+        display: block;
+        background: $negro;
+        padding: 4px 6px;
+        border: none;
+        margin-left: 10px;
+        border: 1px solid inherit;
+        border-radius: 10px;
+    }
+
+    input[type="reset"]:active {
+            color: $negro;
+            background-color: $blanco;
+            border: 1px solid $negro;
+            box-shadow: 0 0 8px $negro;
+    }
+}
+
 // DECORACION FOOTER
 
 .pie {
@@ -889,6 +930,20 @@ a {
             }
         }
     }
+
+    .contenedor_contacto {
+
+        .mensaje {
+            
+            input {
+                width: 40%;
+            }
+
+            textarea {
+                width: 40%;
+            }
+        }
+    }
 }
 
 @media (min-width: 992px) {
@@ -962,7 +1017,7 @@ a {
     .tarjetas {
         width: 30%;
         height: 500px;
-        flex-direction: row;
+        flex-direction: column;
 
         p {
             text-align: center;
@@ -1000,6 +1055,28 @@ a {
         }
     }
 
+    .suscripcion {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    
+        input[type="email"] {
+            width: 20%;
+        }
+    
+        input[type="reset"] {
+            color: $blanco;
+            display: block;
+            background: $negro;
+            padding: 4px 6px;
+            border: none;
+            margin-left: 10px;
+            border: 1px solid inherit;
+            border-radius: 10px;
+        }
+    }
+
     .pie {
         .redes {
             display: flex;
@@ -1033,4 +1110,3 @@ a {
         }
     }
 }
-
